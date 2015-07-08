@@ -1,0 +1,32 @@
+/* TE MWT Assessment, Digital Skills Academy 
+// Student ID: D14128497
+// by Andrei Rjabokon 
+// andrei.rjabokon att techelevate.net 
+// updated 28/06/2015 
+// ver1.5 */
+
+body {
+	font-family: Tahoma;
+}
+
+p {
+	margin-left: 8%;
+	margin-right: 8%;
+	text-align: left;
+}
+
+.personalPhoto {
+	margin-left: 5%;
+	margin-top: 5%;
+}
+
+.personalData {
+	margin-left: 8%;
+	padding-left: 8%; 
+}
+
+.footlabel {
+	text-align: center;	
+}
+
+

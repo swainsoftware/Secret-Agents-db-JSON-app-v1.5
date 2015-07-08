@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MWT Assessment Mobile JSON list app</title>
+	<!-- Author Andrei Rjabokon -->
+	<!-- Assignment: TE2.0 Mobile Web Technologies, Digital Skills Academy -->
+	<!-- Student ID: D14128497 -->
+	<!-- updated 28/06/2015 -->
+	<!-- andrei.rjabokon att techelevate.net -->
+	<!-- ver1.5 -->
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/myCss.css">
+	<link rel="stylesheet" href="themes/assessment.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	
+	<script type="text/javascript" src="jquery/jquery-1.11.3.min.js"></script> 
+	<script type="text/javascript" src="jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script type="text/javascript" src="js/myJs.js"></script>
+</head>
+
+<body onload="bodyInitialise()">
+
+<div id="dynamic-data">
+
+<!-- Main div including menus, header and footer -->
+<div id="mainDiv" data-theme="d" data-role="page">
+	
+	<!-- Main header -->
+	<div data-role="header" data-position="fixed">
+		<a href="#menuDivLeft" data-icon="bars" data-iconpos="notext">Menu</a>
+		<a href="#menuDivRight" data-icon="gear" data-iconpos="notext">Settings</a>
+		<h3>Secret Agents v1.5</h3>
+	</div>
+	
+	<!-- Main content -->
+	<div id="mainPage" data-role="main" class="ui-content">
+	
+		<div class="primary-content">
+			<div data-demo-html="true">
+				<ul id="myList" data-role="listview" data-filter="true" data-filter-reveal="false" data-autodividers="true">
+					<!-- list items go here -->
+				</ul>
+			</div>
+		</div>
+		
+	<!-- End of main content -->
+	</div>
+	
+	<!-- Main footer -->
+	<div data-role="footer" data-position="fixed"><p class="footlabel">&copy Andrei Rjabokon 2015</p></div>
+	
+	<!-- Left panel -->
+	<div id="menuDivLeft" data-role="panel" data-position="left" data-display="overlay">
+		<ul data-role="listview" style="margin-top:-16px;">
+			<li data-icon="delete" style="background-color:#222;">
+				<a href="#mainPage" data-rel="close">..close</a>
+			</li>
+			<li>
+				<a href="#one" data-transition="slide">About the App</a>
+			</li>
+			<li>
+				<a href="#two" data-transition="slide">Lorem Ipsum</a>
+			</li>
+			<li data-role="list-divider"></li>
+			<li>
+				<a href="#aboutMe" data-transition="slide">About Me</a>
+			</li>
+		</ul>
+	<!-- End of left panel -->
+	</div>
+
+	<!-- Right panel -->
+	<div id="menuDivRight" data-role="panel" data-position="right" data-display="overlay">
+        <h3>Settings </h3>
+		
+		<form id="themeForm">
+			<fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+    		<legend>Color Theme:</legend>
+    		<input type="radio" name="radio-choice-h-6" id="radio-choice-h-6a" onclick="changeTheme(this)">
+    			<label for="radio-choice-h-6a">A</label>
+
+    		<input type="radio" name="radio-choice-h-6" id="radio-choice-h-6b" onclick="changeTheme(this)">
+    			<label for="radio-choice-h-6b">B</label>
+
+    		<input type="radio" name="radio-choice-h-6" id="radio-choice-h-6c" checked="checked" onclick="changeTheme(this)">
+    			<label for="radio-choice-h-6c">C</label>
+
+			</fieldset>
+		</form>
+		
+		<p>More settings will be introduced in ver2.0</p>
+		
+		<a href="#mainPage" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left ui-btn-inline">Close</a>
+		
+	<!-- End right panel -->
+	</div>
+<!-- End of Main div -->
+</div>
+
+<!-- About App page -->
+<div id="one" data-role="page" data-theme="d">
+	<!-- About App header -->
+	<div data-role="header">
+		<a href="#mainDiv" data-icon="back" data-rel="back" data-iconpos="notext">Back</a>
+		<h3>About</h3>
+	</div>
+	
+	<p>The app reads JSON file, parses data and dynamically creates a list of sorted searchable items according to data received.</p>
+	<p>Additional information will be provided here soon in ver2.0</p>
+	
+	<a href="#mainDiv" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-back ui-btn-icon-left">Back</a>
+	
+	<!-- About App footer -->
+	<div data-role="footer" data-position="fixed"><p class="footlabel">&copy Andrei Rjabokon 2015</p></div>
+<!-- End About App page -->
+</div>
+
+<!-- Lorem Ipsum page with grid split -->
+<div id="two" data-role="page" data-theme="d">
+	<!-- Lorem Ipsum page header -->
+	<div data-role="header">
+		<a href="#mainDiv" data-icon="back" data-rel="back" data-iconpos="notext">Back</a>
+		<h3>Lorem Ipsum</h3>
+	</div>
+	
+	<!-- Lorem Ipsum grid contents -->
+	<div class="ui-grid-a">
+		<div class="ui-block-a">
+			<p> 1/2 </p>
+			<p> Lorem ipsum dolor sit amet, no ferri dicat cum, eam consul referrentur et. Nam ea porro ceteros deterruisset, id eos affert viderer iracundia. Justo dolores definiebas ius an, agam philosophia ad vel. At usu nostrud labores, vim id quem utamur vulputate. Sed praesent dignissim et, ea everti splendide definitiones cum. Est at labore suavitate, cu mea sint illud postulant, est vidit oblique ea. </p>
+		</div>
+		
+		<div class="ui-block-b">
+			<p> 2/2 </p>
+			<p> Officia tempor officia eu minim do voluptate culpa aliquip cupidatat. Pariatur velit id elit minim excepteur pariatur laborum nisi fugiat non dolore et tempor. Pariatur nisi aliquip nisi tempor pariatur et magna. </p>
+		</div>	
+	</div>
+	
+	<a href="#mainDiv" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-back ui-btn-icon-left">Back</a>
+	
+	<!-- Lorem Ipsum footer -->
+	<div data-role="footer" data-position="fixed"><p class="footlabel">&copy Andrei Rjabokon 2015</p></div>
+	
+<!-- End of Lorem Ipsum page -->
+</div>
+
+<!-- About Me page -->
+<div id="aboutMe" data-role="page" data-theme="d">
+	<div data-role="header">
+		<a href="#mainDiv" data-icon="back" data-rel="back" data-iconpos="notext">Back</a>
+		<h3>About Me</h3>
+	</div>
+	
+	<!-- About Me grid content -->
+	<div class="ui-grid-b">
+		<div class="ui-block-a">
+			<p>by Andrei Rjabokon</p>
+			<p>Digital Skills Academy</p>
+			<p>student ID:D14128497</p>
+			<p>andrei.rjabokon att techelevate.net</p>
+		</div>
+
+		<div class="ui-block-b">
+			<p><a href="http://swain.atwebpages.com">SWAIN Home</a></p>
+		</div>
+		
+		<div class="ui-block-c">
+			<p><a href="https://github.com/swainsoftware">SWAIN on GitHub</a></p>
+		</div>
+	</div>
+	
+	<a href="#mainDiv" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-icon-back ui-btn-icon-left">Back</a>
+	
+	<div data-role="footer" data-position="fixed"><p class="footlabel">&copy Andrei Rjabokon 2015</p></div>
+<!-- End of About Me page -->
+</div>
+
+<!-- dynamically created pages from JSON  go below -->
+</div>
+
+</body>
+</html>
